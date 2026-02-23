@@ -1,275 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Ignacio Rocco">
-      <meta name="author" content="Ignacio Rocco">
-      <title>Ignacio Rocco</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-   </head>
-   <body>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
-               <br>
-               <br>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ignacio Rocco | Google DeepMind</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+   <style>
+      body {
+         font-family: 'Inter', sans-serif;
+         color: #333;
+         line-height: 1.6;
+         background-color: #fdfdfd;
+      }
+
+      h1,
+      h2,
+      h3 {
+         font-weight: 700;
+         color: #111;
+      }
+
+      a {
+         color: #0066cc;
+         text-decoration: none;
+         transition: 0.2s;
+      }
+
+      a:hover {
+         color: #004499;
+         text-decoration: underline;
+      }
+
+      .profile-card {
+         padding-top: 4rem;
+         position: sticky;
+         top: 0;
+      }
+
+      .profile-img {
+         width: 100%;
+         max-width: 250px;
+         border-radius: 12px;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         margin-bottom: 1.5rem;
+      }
+
+      .social-icons a {
+         font-size: 1.5rem;
+         margin-right: 15px;
+         color: #666;
+         /* This removes the underscore */
+         text-decoration: none !important;
+         display: inline-block;
+      }
+
+      .social-icons a:hover {
+         color: #000;
+         /* Ensures the underline doesn't reappear on hover */
+         text-decoration: none !important;
+      }
+
+      .section-title {
+         border-bottom: 2px solid #eee;
+         padding-bottom: 10px;
+         margin-top: 4rem;
+         margin-bottom: 2rem;
+         font-size: 1.5rem;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .pub-card {
+         margin-bottom: 3rem;
+         padding-bottom: 1rem;
+         transition: 0.3s;
+      }
+
+      .pub-img-container {
+         margin-bottom: 1rem;
+      }
+
+      .pub-img {
+         border-radius: 8px;
+         width: 100%;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+         transition: transform 0.3s;
+      }
+
+      .pub-img:hover {
+         transform: scale(1.02);
+      }
+
+      .venue {
+         font-weight: 600;
+         color: #d63384;
+         font-size: 0.9rem;
+         margin-top: 4px;
+      }
+
+      .btn-links {
+         display: inline-block;
+         padding: 3px 12px;
+         font-size: 0.8rem;
+         font-weight: 600;
+         border: 1px solid #dee2e6;
+         border-radius: 6px;
+         margin-right: 6px;
+         margin-top: 10px;
+         color: #495057;
+         background: #fff;
+      }
+
+      .btn-links:hover {
+         background: #f8f9fa;
+         border-color: #adb5bd;
+         text-decoration: none;
+         color: #000;
+      }
+
+      .news-item {
+         margin-bottom: 12px;
+         font-size: 0.95rem;
+         display: flex;
+         align-items: flex-start;
+      }
+
+      .news-date {
+         font-weight: 700;
+         color: #adb5bd;
+         min-width: 90px;
+         flex-shrink: 0;
+      }
+
+      @media (max-width: 768px) {
+         .profile-card {
+            position: relative;
+            padding-top: 2rem;
+            text-align: center;
+         }
+
+         .news-date {
+            min-width: 70px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-4 col-md-5">
+            <div class="profile-card">
+               <img src="images/ignacio.jpg" alt="Ignacio Rocco" class="profile-img">
                <h1>Ignacio Rocco</h1>
-               <h3custom>Research Scientist</h3custom>
-               <p style="font-size: 120%;text-align: justify;">
-               </p>
-               <div id="contact">
-                  <p style="font-size: 120%;text-align: justify;">
-                     Google DeepMind<br>
-                  </p>
+               <p class="lead mb-2">Senior Research Scientist</p>
+               <p class="text-muted"><i class="bi bi-building"></i> Google DeepMind</p>
+
+               <div class="social-icons mb-4">
+                  <a href="https://scholar.google.com/citations?user=hQZd6IsAAAAJ" title="Google Scholar"><i
+                        class="bi bi-mortarboard-fill"></i></a>
+                  <a href="https://github.com/ignacio-rocco" title="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://arxiv.org/search/cs?query=Ignacio+Rocco" title="arXiv">
+                     <img src="images/arxiv-logomark-small.svg" alt="arXiv"
+                        style="width: 22px; height: 22px; vertical-align: middle; margin-top: -4px; opacity: 0.7; transition: 0.2s;"
+                        onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCf0Zg1AaoaqUShvSh4yZh_w" title="YouTube"><i
+                        class="bi bi-youtube"></i></a>
                </div>
-               <a href="https://scholar.google.com/citations?user=hQZd6IsAAAAJ"><img style="margin: 0px; max-height:30px;" src="images/gs.png"></a>
-               <a href="https://github.com/ignacio-rocco"><img style="margin: 0px; max-height:30px;" src="images/gh.png"></a>
-               <a href="https://arxiv.org/search/cs?query=Ignacio+Rocco&amp;searchtype=author&amp;abstracts=show&amp;order=-announced_date_first&amp;size=50"><img style="margin: 0px; max-height:30px;" src="images/arxiv.png"></a>
-               <a href="https://www.youtube.com/channel/UCf0Zg1AaoaqUShvSh4yZh_w"><img style="margin: 0px; max-height:30px;" src="images/yt.png"></a>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-               <br><br>
-               <img src="images/ignacio.jpg" title="" style="width: 100%;max-width:400px;">
+
+               <nav class="d-none d-md-block mt-5">
+                  <ul class="list-unstyled">
+                     <li class="mb-2"><a href="#about" class="text-dark fw-bold">About</a></li>
+                     <li class="mb-2"><a href="#news" class="text-dark fw-bold">News</a></li>
+                     <li class="mb-2"><a href="#publications" class="text-dark fw-bold">Publications</a></li>
+                     <li class="mb-2"><a href="#misc" class="text-dark fw-bold">Misc</a></li>
+                  </ul>
+               </nav>
             </div>
          </div>
-         <div class="row">
-            <div class="col-md-12">
-               <h3></h3>
-            </div>
-            <div class="col-md-12">
-               <p style="font-size: 120%;text-align: justify;">
-                  I am a research scientist at <a href="https://www.deepmind.com/">Google DeepMind</a> working in problems related to computer vision. 
-                  </br></br>
-                  Previously, I was a post-doctoral researcher at <a href="https://ai.facebook.com/research/">Facebook AI Research (FAIR)</a>, working with <a href="https://nneverova.github.io/">Natalia Neverova</a> and <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea Vedaldi</a>.
-                  Before, I completed my PhD at the <a href="http://www.di.ens.fr/willow">Willow</a> team, INRIA/ENS, working under the supervision of <a href="http://www.di.ens.fr/~josef/">Josef Sivic</a> and <a href="http://www.relja.info/">Relja Arandjelović</a> developing trainable methods for solving the image alignment problem in difficult cases presenting strong appearance variations (including category-level matching and variations in depiction style), or changes in the scene due to the passage of time. Earlier, I got a Master's degree in Mathematics/Vision/Machine Learning from ENS Paris-Saclay. 
+
+         <div class="col-lg-8 col-md-7 pb-5">
+
+            <section id="about" style="padding-top: 4rem;">
+               <h3 class="section-title">About</h3>
+               <p class="fs-5">
+                  I am a Senior Research Scientist at <a href="https://deepmind.google/"
+                     class="d-inline-flex align-items-center" style="text-decoration: none;">
+                     <img src="images/deepmind-color.svg" alt=""
+                        style="height: 1.1rem; margin-right: 6px; vertical-align: middle;">
+                     Google DeepMind
+                  </a> working on problems related to computer vision.
                </p>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-12">
-               <h3>News</h3>
-               <p style="font-size: 110%;text-align: justify;">
-                  05/2023 - I started as a Research Scientist in Google DeepMind.</br>
-                  03/2023 - 2 accepted papers at CVPR 2023.</br>
-                  04/2022 - I was awarded the best PhD thesis prize by <a href="http://afrif.irisa.fr/?page_id=54">AFRIF</a>.</br>
-                  03/2022 - 2 accepted papers at CVPR 2022.</br>
-                  04/2021 - I started a post-doc at FAIR.</br>
-                  10/2020 - I graduated from my PhD. You can find the manuscript <a href="https://tel.archives-ouvertes.fr/tel-03088795">here</a>.</br>
-                  07/2019 - Relja Arandjelović gave an Invited Talk presenting my work at <a href="https://britishmachinevisionassociation.github.io/meetings/07-19-geometry-deep-learning.html">BMVA's Geometry and Deep Learning Meeting</a>.</br>
-                  04/2019 - Talk at <a href="https://imagine-lab.enpc.fr/">IMAGINE group</a> at ENPC.</br>
-                  03/2019 - Talk at <a href="https://sites.google.com/site/smileinparis/">SMILE seminar</a> at Télécom Paris.</br>
-                  12/2018 - <a href="https://www.facebook.com/nipsfoundation/videos/515859272265612?t=1271">Spotlight oral</a> at NeurIPS'18.</br>
-                  08/2017 - Talk at the <a href="http://impact.ciirc.cvut.cz/?page_id=68#seminar3">Workshop on visual localization and geometric matching</a> at CIIRC, CTU, Prague.</br>
-                  07/2017 - <a href="https://www.youtube.com/watch?v=4RMwGcT4uA8">Spotlight oral</a> at CVPR'17.</br>
-                  06/2017 - Attended the <a href="https://mila.quebec/en/cours/deep-learning-summer-school-2017/">Deep Learning and Reinforcement Learning Summer School</a> at MILA, Montreal.</br>
-                  06/2017 - Attended the Machine Learning Student Summit at Google Zurich.
+               <p>
+                  Previously, I was a post-doctoral researcher at Facebook AI Research (FAIR), working
+                  with Natalia Neverova and Andrea Vedaldi.
+                  I completed my PhD at the Willow team, INRIA/ENS, under the supervision of Josef Sivic and Relja
+                  Aranđelović, developing trainable methods for solving image alignment problems. Earlier, I earned a
+                  Master's degree in Mathematics/Vision/Machine Learning from ENS Paris-Saclay.
                </p>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-12">
-               <h3>Publications</h3>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <img style="margin: 0px; max-width:100%;" src="images/replay.png">
+            </section>
+
+            <section id="news">
+               <h3 class="section-title">News</h3>
+               <div class="news-item"><span class="news-date">06/2025</span> <span><em>TAPNext</em> accepted at
+                     <strong>ICCV
+                        2025</strong>.</span></div>
+               <div class="news-item"><span class="news-date">05/2025</span> <span><em>Direct Motion Models</em>
+                     accepted at <strong>ICML 2025</strong>.</span></div>
+               <div class="news-item"><span class="news-date">07/2024</span> <span><em>CoTracker</em> accepted at
+                     <strong>ECCV 2024</strong>.</span></div>
+               <div class="news-item"><span class="news-date">09/2024</span> <span><em>Tapvid-3D</em> accepted at
+                     <strong>NeurIPS 2024</strong>.</span></div>
+               <div class="news-item"><span class="news-date">05/2023</span> <span>I started as a Research Scientist at
+                     <strong>Google DeepMind</strong>.</span></div>
+               <div class="news-item"><span class="news-date">03/2023</span> <span>2 accepted papers at <strong>CVPR
+                        2023</strong>.</span></div>
+               <div class="news-item"><span class="news-date">04/2022</span> <span>Awarded the <strong>best PhD thesis
+                        prize</strong> by <a href="http://afrif.irisa.fr/?page_id=54">AFRIF</a>.</span></div>
+
+               <div class="news-item"><span class="news-date">03/2022</span> <span>2 accepted papers at <strong>CVPR
+                        2022</strong>.</span></div>
+               <div class="news-item"><span class="news-date">04/2021</span> <span>Started a post-doc at
+                     <strong>FAIR</strong>.</span>
+               </div>
+               <div class="news-item"><span class="news-date">10/2020</span> <span>Graduated from PhD. Find the
+                     manuscript <a href="https://tel.archives-ouvertes.fr/tel-03088795">here</a>.</span></div>
+            </section>
+
+            <section id="publications">
+               <h3 class="section-title">Publications</h3>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <video class="pub-img" autoplay muted loop playsinline>
+                        <source src="images/d4rt.mp4" type="video/mp4">
+                     </video>
                   </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     Roman Shapovalov<sup>*</sup>, Yanir Kleiman<sup>*</sup>, <b>Ignacio Rocco</b><sup>*</sup>, David Novotny, Andrea Vedaldi, Changan Chen, Filippos Kokkinos, Ben Graham, Natalia Neverova (*: equal contribution)<br>
-                     <b>Replay: Multi-modal Multi-view Acted Videos for Casual Holography</b> <br>
-                     In <i>Proceedings of the International Conference on Computer Vision (ICCV)</i>, 2023. <br>
-                     [<a href="https://replay-dataset.github.io/">Project page</a>][<a href="https://arxiv.org/abs/2307.12067">Paper on arXiv</a>]
+                  <div class="col-md-8">
+                     <span class="fw-bold">Efficiently Reconstructing Dynamic Scenes one D4RT at a Time</span>
+                     <div class="small text-muted">C. Zhang, G. Le Moing, S. Koppula, <strong>I. Rocco</strong>, L.
+                        Momeni,
+                        J. Xie, S. Sun, R. Sukthankar, J. K. Barral, R. Hadsell, Z. Ghahramani, A. Zisserman, J. Zhang,
+                        M. S. M. Sajjadi</div>
+                     <div class="venue">arXiv 2025</div>
+                     <a href="https://d4rt-paper.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2512.08924" class="btn-links">arXiv</a>
+                     <a href="https://deepmind.google/blog/d4rt-teaching-ai-to-see-the-world-in-four-dimensions/"
+                        class="btn-links">Blog Post</a>
                   </div>
                </div>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <video style="width: 200px;" poster="" id="ignacio" autoplay controls muted loop playsinline height="100%">
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/trajan_good.gif" class="pub-img" alt="Trajan">
+                  </div>
+                  <div class="col-md-8">
+                     <span class="fw-bold">Direct Motion Models for Assessing Generated Videos</span>
+                     <div class="small text-muted">K. Allen, C. Doersch, G. Zhou, M. Suhail, D. Driess, <strong>I.
+                           Rocco</strong>, Y. Rubanova, T. Kipf, M. S. M. Sajjadi, K. Murphy, J. Carreira, S. van
+                        Steenkiste</div>
+                     <div class="venue">ICML 2025</div>
+                     <a href="https://trajan-paper.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2505.00209" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <video class="pub-img" autoplay muted loop playsinline>
+                        <source src="images/tapnext.mp4" type="video/mp4">
+                     </video>
+                  </div>
+                  <div class="col-md-8">
+                     <span class="fw-bold">TAPNext: Tracking Any Point (TAP) as Next Token Prediction</span>
+                     <div class="small text-muted">A. Zholus, C. Doersch, Y. Yang, S. Koppula, V. Pătrăucean, X. O. He,
+                        <strong>I. Rocco</strong>, M. S. M. Sajjadi, S. Chandar, R. Goroshin
+                     </div>
+                     <div class="venue">ICCV 2025</div>
+                     <a href="https://tap-next.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2504.05579" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/scaling4d.png" class="pub-img" alt="Scaling 4D representations">
+                  </div>
+                  <div class="col-md-8">
+                     <span class="fw-bold">Scaling 4D Representations</span>
+                     <div class="small text-muted">J. Carreira, D. Gokay, M. King, C. Zhang, <strong>I. Rocco</strong>,
+                        A.
+                        Mahendran, T.A. Keck, J. Heyward, S. Koppula, E. Pot, G. Erdogan, Y. Hasson, Y. Yang, K. Greff,
+                        G. Le Moing, S. van Steenkiste, D. Zoran, D. A. Hudson, P. Vélez, L. Polanía, L. Friedman, C.
+                        Duvarney, R. Goroshin, K. Allen, J. Walker, R. Kabra, E. Aboussouan, J. Sun, T. Kipf, C.
+                        Doersch, V. Pătrăucean, D. Damen, P. Luc, M. S. M. Sajjadi, A. Zisserman</div>
+                     <div class="venue">arXiv 2024</div>
+                     <a href="https://arxiv.org/abs/2412.15212" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/tapvid3d.gif" class="pub-img" alt="TAPVid-3d">
+                  </div>
+                  <div class="col-md-8">
+                     <span class="fw-bold">TAPVid-3d: A benchmark for tracking any point in 3d</span>
+                     <div class="small text-muted">S. Koppula, <strong>I. Rocco</strong>, Y. Yang, J. Heyward, J.
+                        Carreira,
+                        A. Zisserman, G. Brostow, C. Doersch</div>
+                     <div class="venue">NeurIPS 2024</div>
+                     <a href="https://tapvid3d.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2407.05921" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/bootstap.png" class="pub-img" alt="BootsTAP">
+                  </div>
+                  <div class="col-md-8">
+                     <span class="fw-bold">BootsTAP: Bootstrapped training for Tracking-Any-Point</span>
+                     <div class="small text-muted">C. Doersch, P. Luc, Y. Yang, D. Gokay, S. Koppula, A. Gupta, J.
+                        Heyward,
+                        <strong>I. Rocco</strong>, R. Goroshin, J. Carreira, A. Zisserman
+                     </div>
+                     <div class="venue">ACCV 2024</div>
+                     <a href="https://bootstap.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2402.00847" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <video class="pub-img" autoplay muted loop playsinline>
+                        <source src="images/horsejump-high.mp4" type="video/mp4">
+                     </video>
+                  </div>
+                  <div class="col-md-8">
+                     <span class="fw-bold">Cotracker: It is better to track together</span>
+                     <div class="small text-muted">N. Karaev, <strong>I. Rocco</strong>, B. Graham, N. Neverova, A.
+                        Vedaldi,
+                        C. Rupprecht</div>
+                     <div class="venue">ECCV 2024</div>
+                     <a href="https://co-tracker.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2307.07635" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/replay.png" class="pub-img" alt="Replay">
+                  </div>
+                  <div class="col-md-8">
+                     <div class="fw-bold">Replay: Multi-modal Multi-view Acted Videos for Casual Holography</div>
+                     <div class="small text-muted">R. Shapovalov*, Y. Kleiman*, <strong>I. Rocco*</strong>, D. Novotny,
+                        A. Vedaldi, C. Chen, F. Kokkinos, B. Graham, N. Neverova</div>
+                     <div class="venue">ICCV 2023</div>
+                     <a href="https://replay-dataset.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2307.12067" class="btn-links">arXiv</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <video class="pub-img" autoplay muted loop playsinline>
                         <source src="https://real-time-humans.github.io/static/videos/377_render.mp4" type="video/mp4">
                      </video>
                   </div>
-                  <div class="col-md-9 col-sm-9">
-                     <b>Ignacio Rocco</b>, Iurii Makarov, Filippos Kokkinos, David Novotny, Benjamin Graham, Natalia Neverova, Andrea Vedaldi<br>
-                     <b>Real-time volumetric rendering of dynamic humans</b> <br>
-                     arXiv, 2023. <br>      
-                     [<a href="https://real-time-humans.github.io/">Project page</a>][<a href="https://arxiv.org/abs/2303.11898">Paper on arXiv</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">Real-time volumetric rendering of dynamic humans</div>
+                     <div class="small text-muted"><strong>I. Rocco</strong>, I. Makarov, F. Kokkinos, D. Novotny, B.
+                        Graham, N. Neverova, A. Vedaldi</div>
+                     <div class="venue">arXiv 2023</div>
+                     <a href="https://real-time-humans.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2303.11898" class="btn-links">arXiv</a>
                   </div>
                </div>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <video style="width: 200px;" poster="" id="ignacio" autoplay controls muted loop playsinline height="100%">
-                        <source src="https://www.robots.ox.ac.uk/~nikita/storage/carousel/compressed/ignacio_waving_reconstruction.mp4" type="video/mp4">
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <video class="pub-img" autoplay muted loop playsinline>
+                        <source
+                           src="https://www.robots.ox.ac.uk/~nikita/storage/carousel/compressed/ignacio_waving_reconstruction.mp4"
+                           type="video/mp4">
                      </video>
                   </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     Nikita Karaev, <b>Ignacio Rocco</b>, Benjamin Graham, Natalia Neverova, Andrea Vedaldi, Christian Rupprecht<br>
-                     <b>DynamicStereo: Consistent Dynamic Depth from Stereo Videos</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2023.<br>      
-                     [<a href="https://dynamic-stereo.github.io/">Project page</a>][<a href="https://arxiv.org/abs/2305.02296">Paper on arXiv</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">DynamicStereo: Consistent Dynamic Depth from Stereo Videos</div>
+                     <div class="small text-muted">N. Karaev, <strong>I. Rocco</strong>, B. Graham, N. Neverova, A.
+                        Vedaldi, C. Rupprecht</div>
+                     <div class="venue">CVPR 2023</div>
+                     <a href="https://dynamic-stereo.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2305.02296" class="btn-links">arXiv</a>
                   </div>
                </div>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <img style="margin: 0px; max-width:100%;" src="images/cop3d.png">
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/cop3d.png" class="pub-img" alt="COP3D">
                   </div>
-                  <div class="col-md-9 col-sm-9">
-                     Samarth Sinha, Roman Shapovalov, Jeremy Reizenstein, <b>Ignacio Rocco</b>, Natalia Neverova, Andrea Vedaldi, David Novotny<br>
-                     <b>Common pets in 3d: Dynamic new-view synthesis of real-life deformable categories</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2023. <br>      
-                  </div>
-               </div>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <img style="margin: 0px; max-width:100%;" src="images/keytr.png">
-                  </div>
-                  <div class="col-md-9 col-sm-9">
-                     D. Novotny, <b>I. Rocco</b>, S. Sinha, A. Carlier, G. Kerchenbaum, R. Shapovalov, N. Smetanin, N. Neverova, B. Graham, A. Vedaldi<br>
-                     <b>KeyTr: Keypoint Transporter for 3D Reconstruction of Deformable Objects in Videos</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2022. (Oral) <br>      
+                  <div class="col-md-8">
+                     <div class="fw-bold">Common pets in 3d: Dynamic new-view synthesis of real-life deformable
+                        categories</div>
+                     <div class="small text-muted">S. Sinha, R. Shapovalov, J. Reizenstein, <strong>I. Rocco</strong>,
+                        N. Neverova, A. Vedaldi, D. Novotny</div>
+                     <div class="venue">CVPR 2023</div>
+                     <a href="https://cop3d.github.io/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2211.03889" class="btn-links">arXiv</a>
                   </div>
                </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <a href="https://nsarafianos.github.io/bodymap"><img style="margin: 0px; max-width:100%;" src="images/bodymap.png"></a>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/syncmatch.png" class="pub-img" alt="SyncMatch">
                   </div>
-                  <div class="col-md-9 col-sm-9">
-                     A. Ianina, N. Sarafianos, Y. Xu, <b>I. Rocco</b>, T. Tung<br>
-                     <b>BodyMap: Learning Full-Body Dense Correspondence Map</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2022. <br>      
-                     [<a href="https://nsarafianos.github.io/bodymap">Project page</a>][<a href="https://arxiv.org/abs/2205.09111">Paper on arXiv</a>]
-                  </div>
-               </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <a href="https://arxiv.org/abs/2109.04409"><img style="margin: 0px; max-width:100%;" src="images/instructional.png"></a>
-                  </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     D. Zhukov, <b>I. Rocco</b>, I. Laptev, J. Sivic, J.L. Schoenberger, B. Tekin, M. Pollefeys<br>
-                     <b>Reconstructing and grounding narrated instructional videos in 3D</b> <br>
-                     arXiv preprint arXiv:2109.04409, 2021.<br>    
-                     [<a href="https://arxiv.org/abs/2109.04409">Paper on arXiv</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">Self-supervised correspondence estimation via multiview registration</div>
+                     <div class="small text-muted">M. El Banani, <strong>I. Rocco</strong>, D. Novotny, A. Vedaldi, N.
+                        Neverova, J. Johnson, B. Graham</div>
+                     <div class="venue">WACV 2023</div>
+                     <a href="https://mbanani.github.io/syncmatch/" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2212.03236" class="btn-links">arXiv</a>
                   </div>
                </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-3 col-sm-3">
-                     <a href="https://www.di.ens.fr/willow/research/sparse-ncnet/"><img style="margin: 0px; max-width:100%;" src="images/sparse-ncnet.png"></a>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/keytr.png" class="pub-img" alt="KeyTr">
                   </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     <b>I. Rocco</b>, R. Arandjelović and J. Sivic<br>
-                     <b>Efficient Neighbourhood Consensus Networks via Submanifold Sparse Convolutions</b> <br>
-                     In <i>Proceedings of the European Conference on Computer Vision (ECCV)</i>, 2020. <br>    
-                     [<a href="http://www.di.ens.fr/willow/research/sparse-ncnet/">Project page</a>][<a href="https://arxiv.org/abs/2004.10566">Paper on arXiv</a>][<a href="https://github.com/ignacio-rocco/sparse-ncnet">PyTorch code</a>]
-                  </div>
-               </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3 col-sm-3 px-0">
-                     <a href="http://www.ok.sc.e.titech.ac.jp/res/RIGHTP/"><img style="margin: 0px; max-width:100%;" src="images/right_place.png"></a>
-                  </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     H. Taira, <b>I. Rocco</b>, J. Sedlar, M. Okutomi, J. Sivic, T. Pajdla, T. Sattler, A. Torii
-                     <br>
-                     <b>Is This The Right Place? Geometric-Semantic Pose Verification for Indoor Visual Localization</b> <br>
-                     In <i>Proceedings of the International Conference on Computer Vision (ICCV)</i>, 2019. <br>    
-                     [<a href="http://www.ok.sc.e.titech.ac.jp/res/RIGHTP/">Project page</a>][<a href="https://arxiv.org/abs/1908.04598">Paper on arXiv</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">KeyTr: Keypoint Transporter for 3D Reconstruction of Deformable Objects in
+                        Videos</div>
+                     <div class="small text-muted">D. Novotny, <strong>I. Rocco</strong>, S. Sinha, A. Carlier, G.
+                        Kerchenbaum, R. Shapovalov, N. Smetanin, N. Neverova, B. Graham, A. Vedaldi</div>
+                     <div class="venue">CVPR 2022 (Oral)</div>
+                     <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Novotny_KeyTr_Keypoint_Transporter_for_3D_Reconstruction_of_Deformable_Objects_in_CVPR_2022_paper.pdf"
+                        class="btn-links">Paper</a>
                   </div>
                </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3 col-sm-3">
-                     <a href="https://dsmn.ml/publications/d2-net.html"><img style="margin: 0px; max-width:100%;" src="images/d2net.png"></a>
+
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/bodymap.png" class="pub-img" alt="BodyMap">
                   </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     M. Dusmanu, <b>I. Rocco</b>, T. Pajdla, M. Pollefeys, J. Sivic, A. Torii, T. Sattler
-                     <br>
-                     <b>D2-Net: A Trainable CNN for Joint Detection and Description of Local Features</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2019. <br>    
-                     [<a href="https://dsmn.ml/publications/d2-net.html">Project page</a>][<a href="https://arxiv.org/abs/1905.03561">Paper on arXiv</a>][<a href="https://github.com/mihaidusmanu/d2-net">PyTorch code</a>]
-                  </div>
-               </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3 col-sm-3">
-                     <a href="http://www.di.ens.fr/willow/research/ncnet/"><img style="margin: 0px; max-width:100%;" src="images/ncnet.png"></a>
-                  </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     <b>I. Rocco</b>, M. Cimpoi, R. Arandjelović, A. Torii, T. Pajdla and J. Sivic
-                     <br>
-                     <b>Neighbourhood Consensus Networks</b> <br>
-                     In <i>Proceedings of the 32nd Conference on Neural Information Processing Systems (NeurIPS)</i>, 2018. (Spotlight)<br>    
-                     [<a href="http://www.di.ens.fr/willow/research/ncnet/">Project page</a>][<a href="https://arxiv.org/abs/1810.10510">Paper on arXiv</a>][<a href="https://github.com/ignacio-rocco/ncnet">PyTorch code</a>][<a href="https://www.facebook.com/nipsfoundation/videos/515859272265612?t=1271">Spotlight oral</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">BodyMap: Learning Full-Body Dense Correspondence Map</div>
+                     <div class="small text-muted">A. Ianina, N. Sarafianos, Y. Xu, <strong>I. Rocco</strong>, T. Tung
+                     </div>
+                     <div class="venue">CVPR 2022</div>
+                     <a href="https://nsarafianos.github.io/bodymap" class="btn-links">Project Page</a>
+                     <a href="https://arxiv.org/abs/2205.09111" class="btn-links">arXiv</a>
                   </div>
                </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3 col-sm-3">
-                     <a href="http://www.di.ens.fr/willow/research/weakalign/"><img style="margin: 0px; max-width:100%;" src="images/weakalign.jpg"></a>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/sparse-ncnet.png" class="pub-img" alt="Sparse NCNet">
                   </div>
-                  <div class="col-md-9 col-sm-9"> 
-                     <b>I. Rocco</b>, R. Arandjelović and J. Sivic<br>
-                     <b>End-to-end weakly-supervised semantic alignment</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2018. <br>    
-                     [<a href="http://www.di.ens.fr/willow/research/weakalign/">Project page</a>][<a href="https://arxiv.org/abs/1712.06861">Paper on arXiv</a>][<a href="https://github.com/ignacio-rocco/weakalign">PyTorch code</a>]
-                  </div>
-               </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3 col-sm-3">
-                     <a href="http://www.di.ens.fr/willow/research/cnngeometric/"><img style="margin: 0px; max-width:100%;" src="images/teaser.png"></a>
-                  </div>
-                  <div class="col-md-9 col-sm-9">
-                     <b>I. Rocco</b>, R. Arandjelović and J. Sivic<br>
-                     <b>Convolutional neural network architecture for geometric matching</b> <br>
-                     In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2017. (Spotlight) <br>    
-                     [<a href="http://www.di.ens.fr/willow/research/cnngeometric/">Project page</a>][<a href="https://arxiv.org/abs/1703.05593">Paper on arXiv</a>][<a href="https://github.com/ignacio-rocco/cnngeometric_matconvnet">MatConvNet code</a>][<a href="https://github.com/ignacio-rocco/cnngeometric_pytorch">PyTorch code</a>][<a href="https://www.youtube.com/watch?v=4RMwGcT4uA8">Spotlight oral</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">Efficient Neighbourhood Consensus Networks via Submanifold Sparse Convolutions
+                     </div>
+                     <div class="small text-muted"><strong>I. Rocco</strong>, R. Arandjelović and J. Sivic</div>
+                     <div class="venue">ECCV 2020</div>
+                     <a href="http://www.di.ens.fr/willow/research/sparse-ncnet/" class="btn-links">Project Page</a>
+                     <a href="https://github.com/ignacio-rocco/sparse-ncnet" class="btn-links">Code</a>
                   </div>
                </div>
-               <br>
-               <br><br>
-               <div class="row">
-                  <div class="col-md-3 col-sm-3">
-                     <img style="margin: 0px; max-width:100%" src="images/rgbdt.png">
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/d2net.png" class="pub-img" alt="D2-Net">
                   </div>
-                  <div class="col-md-9 col-sm-9">
-                     <b>I. Rocco</b>, M. Goncalves Almeida Antunes, D. Aouada and B. Ottersten<br>
-                     <b>RGB-D and Thermal Sensor Fusion</b> <br>
-                     In <i>11th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISAPP)</i>, 2016. <br>
-                     [<a href="http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0005717706100617">Paper on Scitepress</a>][<a href="http://www.di.ens.fr/~iroccosp/papers/irocco_visapp16.pdf">PDF</a>]
+                  <div class="col-md-8">
+                     <div class="fw-bold">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features
+                     </div>
+                     <div class="small text-muted">M. Dusmanu, <strong>I. Rocco</strong>, T. Pajdla, M. Pollefeys, J.
+                        Sivic, A. Torii, T. Sattler</div>
+                     <div class="venue">CVPR 2019</div>
+                     <a href="https://dsmn.ml/publications/d2-net.html" class="btn-links">Project Page</a>
+                     <a href="https://github.com/mihaidusmanu/d2-net" class="btn-links">Code</a>
                   </div>
                </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-12">
-               <h3>Teaching</h3>
-               Teaching assistant for the Object Recognition and Computer Vision course of ENS Paris Saclay's <a href="http://math.ens-paris-saclay.fr/version-francaise/formations/master-mva/">MVA M2 Master</a> on the 2016, 2017 and 2018 editions.
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-12">
-               <h3>Misc.</h3>
-               I have reviewed for CVPR, ECCV, BMVC, NeurIPS, T-PAMI, and other conferences and journals.
-            </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/ncnet.png" class="pub-img" alt="NCNet">
+                  </div>
+                  <div class="col-md-8">
+                     <div class="fw-bold">Neighbourhood Consensus Networks</div>
+                     <div class="small text-muted"><strong>I. Rocco</strong>, M. Cimpoi, R. Arandjelović, A. Torii, T.
+                        Pajdla and J. Sivic</div>
+                     <div class="venue">NeurIPS 2018 (Spotlight)</div>
+                     <a href="http://www.di.ens.fr/willow/research/ncnet/" class="btn-links">Project Page</a>
+                     <a href="https://github.com/ignacio-rocco/ncnet" class="btn-links">Code</a>
+                  </div>
+               </div>
+
+               <div class="row pub-card">
+                  <div class="col-md-4 pub-img-container">
+                     <img src="images/teaser.png" class="pub-img" alt="CNN Geometric">
+                  </div>
+                  <div class="col-md-8">
+                     <div class="fw-bold">Convolutional neural network architecture for geometric matching</div>
+                     <div class="small text-muted"><strong>I. Rocco</strong>, R. Arandjelović and J. Sivic</div>
+                     <div class="venue">CVPR 2017 (Spotlight)</div>
+                     <a href="http://www.di.ens.fr/willow/research/cnngeometric/" class="btn-links">Project Page</a>
+                     <a href="https://github.com/ignacio-rocco/cnngeometric_pytorch" class="btn-links">PyTorch</a>
+                  </div>
+               </div>
+
+            </section>
+
+            <section id="misc">
+               <h3 class="section-title">Teaching & Reviewing</h3>
+               <p>Teaching assistant for the Object Recognition and Computer Vision course of ENS Paris Saclay's
+                  <strong>MVA M2 Master</strong> (2016, 2017, 2018).
+               </p>
+               <p class="text-muted small">I have reviewed for CVPR, ECCV, BMVC, NeurIPS, T-PAMI, and other journals.
+               </p>
+            </section>
+
          </div>
       </div>
-      <!-- /container -->
-      <!-- Bootstrap core JavaScript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-   </body>
+   </div>
+
+</body>
+
 </html>
